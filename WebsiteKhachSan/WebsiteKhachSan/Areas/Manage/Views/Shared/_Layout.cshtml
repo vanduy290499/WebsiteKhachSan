@@ -1,0 +1,175 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="/slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          href="~/Areas/Assets//font/fontawesome-free-5.14.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="~/Areas/Assets/Css/TrangChu.css" />
+    <link rel="stylesheet" href="~/Areas/Assets/Css/base.css" />
+</head>
+
+<body>
+   
+    @RenderSection("Listinforight", required: false)
+    @RenderBody()
+
+    <div class="footer">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column">
+                    <h3 class="footer__heading">GIỚI THIỆU</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Giới thiệu về Trip</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Điều khoản sử dụng</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Quy chế hoạt động</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Chính sách bảo mật</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Blog du lịch</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Tuyển dụng CTV</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid__column">
+                    <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Hướng dẫn</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Trả & đổi phòng</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="" class="footer__list--item-link">Chính sách hỗ trợ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid__column">
+                    <h3 class="footer__heading">THANH TOÁN</h3>
+                    <ul class="footer__list"></ul>
+                </div>
+
+                <div class="grid__column">
+                    <h3 class="footer__heading">THEO DÕI CHÚNG TÔI</h3>
+                    <ul class="footer__list">
+                        <li class="footer__list--item">
+                            <a href="">
+                                <i class="fab fa-facebook"></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="">
+                                <i class="far fa-envelope"></i>
+                                Gmail
+                            </a>
+                        </li>
+                        <li class="footer__list--item">
+                            <a href="">
+                                <i class="fab fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid__column">
+                    <h3 class="footer__heading">Tải ngay ứng dụng</h3>
+                    <div class="footer__download">
+                        <img src="https://img.tickid.vn/photos/qrcode_base64/aHR0cDovL2h5cGVydXJsLmNvL215b2h1aQ"
+                             alt=""
+                             class="footer__download--qr" />
+                        <div class="footer__download--apps">
+                            <a class="footer__download--apps-link" href="">
+                                <img src="https://statics.vntrip.vn/images/logo/appStore.png"
+                                     alt=""
+                                     class="footer__download--apps-icon" />
+                            </a>
+                            <a class="footer__download--apps-link" href="">
+                                <img src="https://statics.vntrip.vn/images/logo/googlePlay.png"
+                                     alt=""
+                                     class="footer__download--apps-icon" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <div class="modal modal__register" id="Modal-register">
+        <div class="modal__container">
+            <div class="modal__form">
+                <div class="modal__form--heading">
+                    <h3 class="modal__form--heading-h3">Đăng ký</h3>
+                    <span class="modal__form--heading-close" id="close-register">&times;</span>
+                </div>
+                <div class="modal__form--content">
+                    <input class="modal__form--content-input modal__form--content-input1"
+                           type="text"
+                           placeholder="Email" />
+                    <div class="modal__form--content-input-pass modal__form--content-input-pass-register">
+                        <input class="modal__form--content-input"
+                               type="password"
+                               placeholder="Mật khẩu" id="show-pass-register1" />
+                        <i class="fas fa-eye-slash modal__form--content-showpass" id="icon-eye-register1"></i>
+                    </div>
+                    <div class="modal__form--content-input-pass modal__form--content-input-pass-register">
+                        <input class="modal__form--content-input"
+                               type="password"
+                               placeholder="Nhập lại mật khẩu" id="show-pass-register2" />
+                        <i class="fas fa-eye-slash modal__form--content-showpass" id="icon-eye-register2"></i>
+                    </div>
+                    <button class="modal__form--content-btn" type="submit">
+                        ĐĂNG KÝ
+                    </button>
+                    <div class="modal__form--footer modal__form--footer-register">
+                        <div class="modal__form--footer-wrap">
+                            <p class="modal__form--footer-p">Bạn đã có tài khoản?</p>
+                            <p class="modal__form--footer-p1" id="form__register-link-to-login">Đăng nhập</p>
+                        </div>
+                        <p class="modal__form--footer-p modal__form--footer-p-register">
+                            Tiếp tục nghĩa là bạn đồng ý với các <span class="modal__form--footer-span">Điều khoản và điều kiện,</span>
+                            cũng như các <span class="modal__form--footer-span">Chính sách bảo mật</span> của TRIP.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript"
+            src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript"
+            src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script src="/slick-1.8.1/slick//slick.min.js"></script>
+    <script src="~/Areas/Assets/Js/TrangChu.js"></script>
+    <script src="~/Areas/Assets/Js/base.js"></script>
+</body>
+</html>

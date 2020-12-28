@@ -1,0 +1,65 @@
+﻿@model WebsiteKhachSan.Areas.Manage.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
+}
+
+<div class="modal modal__login" id="Modal-login">
+    <div class="modal__container">
+        <div class="modal__form">
+            <div class="modal__form--heading">
+                <h3 class="modal__form--heading-h3">Đăng nhập</h3>
+                <span class="modal__form--heading-close" id="close-login">&times;</span>
+            </div>
+            <div>
+                @using (Html.BeginForm("Login", "TrangChu", FormMethod.Post))
+                {
+                    <div class="modal__form--content">
+                        @Html.TextBoxFor(model => model.UserName, new
+                   {
+                       @class = "modal__form--content-input modal__form--content-input1",
+                       @autofocus = "autofocus"
+                   })
+                    </div>
+                    <div class="" modal__form--content-input-pass">
+                        @Html.PasswordFor(model => model.PassWord, new
+                       {
+                           @class = "modal__form--content-input"
+                       })
+                    </div>
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(model => model.RememberMe) RememberMe
+                            </label>
+                        </div>
+                        <p class="modal__form--content-forget">Quên mật khẩu</p>
+                        <button class="modal__form--content-btn" type="submit">
+                            ĐĂNG NHẬP
+                        </button>
+                }
+            </div>
+            <div class="">
+
+                <div class="modal__form--content-or">
+                    <span class="modal__form--content-or-span"></span>
+                    <p class="modal__form--content-or-p">Hoặc</p>
+                    <span class="modal__form--content-or-span"></span>
+                </div>
+                <div class="modal__form--content-link">
+                    <i class="fab fa-facebook-square modal__form--content-link-iconFB"></i>
+                    <p class="modal__form--content-link-p">Đăng nhập bằng Facebook</p>
+                </div>
+                <div class="modal__form--content-link">
+                    <img class="modal__form--content-link-iconGG"
+                         src="https://i.pinimg.com/originals/74/65/f3/7465f30319191e2729668875e7a557f2.png"
+                         alt="" />
+                    <p class="modal__form--content-link-p">Đăng nhập bằng Google</p>
+                </div>
+            </div>
+            <div class="modal__form--footer modal__form--footer-login">
+                <p class="modal__form--footer-p">Chưa có tài khoản?</p>
+                <p class="modal__form--footer-p1" id="form__login-link-to-register">Đăng ký</p>
+            </div>
+        </div>
+    </div>
+</div>
