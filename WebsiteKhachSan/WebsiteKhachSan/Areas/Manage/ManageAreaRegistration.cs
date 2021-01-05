@@ -19,6 +19,16 @@ namespace WebsiteKhachSan.Areas.Manage
                 "Manage/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
+            context.MapRoute(
+               name: "DanhSach",
+               url: "danh-sach",
+               defaults: new { controller = "Admin", action = "DanhSachTaiKhoan", id = UrlParameter.Optional }
+           );
+            context.MapRoute(
+               name: "Them",
+               url: "them-tai-khoan",
+               defaults: new { controller = "Admin", action = "Them", id = UrlParameter.Optional }
+           );
         }
     }
 }

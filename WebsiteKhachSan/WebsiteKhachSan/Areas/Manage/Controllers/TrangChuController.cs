@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Model.Dao;
 using WebsiteKhachSan.Common;
 using WebsiteKhachSan.Areas.Manage.Models;
+using Model.EF;
 
 namespace WebsiteKhachSan.Areas.Manage.Controllers
 {
@@ -31,7 +32,7 @@ namespace WebsiteKhachSan.Areas.Manage.Controllers
                         userSession.UserName = user.TaiKhoan1;
                         userSession.UserID = user.MaTK;
                         Session.Add(CommonConstants.USER_SESSION, userSession);
-                        return RedirectToAction("Index", "TrangChu");
+                        return RedirectToAction("Index", "Admin");
                     }
                     else
                     {
@@ -41,5 +42,6 @@ namespace WebsiteKhachSan.Areas.Manage.Controllers
             }
             return View("Index");
         }
+        
     }
 }
