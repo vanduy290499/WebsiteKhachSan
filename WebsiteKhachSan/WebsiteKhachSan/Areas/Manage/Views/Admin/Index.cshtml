@@ -3,6 +3,14 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Manage/Views/Shared/_Layout1.cshtml";
 }
-
-<h2>Index</h2>
+@{ 
+    var ten = (WebsiteKhachSan.Common.UserLogin)Session[WebsiteKhachSan.Common.CommonConstants.USER_SESSION];
+}
+@if (ten != null)
+{
+    <script>
+    alert("Xin chào, @ten.UserName")
+    </script>
+}
+<h2>Trang chủ</h2>
 

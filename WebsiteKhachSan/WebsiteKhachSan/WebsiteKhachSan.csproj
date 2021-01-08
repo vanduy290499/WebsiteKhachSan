@@ -1892,6 +1892,7 @@
     <Content Include="Areas\Assets\Admin\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Areas\Assets\Css\base.css" />
     <Content Include="Areas\Assets\Css\SanGiaRe.css" />
+    <Content Include="Areas\Assets\Css\slick-theme.css" />
     <Content Include="Areas\Assets\Css\TinTuc.css" />
     <Content Include="Areas\Assets\Css\TrangChu.css" />
     <Content Include="Areas\Assets\Css\VeMayBay.css" />
@@ -3547,7 +3548,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Areas\Manage\Views\web.config" />
+    <Content Include="Areas\Manage\Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Areas\Manage\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Manage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Manage\Views\TrangChu\Index.cshtml" />
@@ -3605,7 +3608,6 @@
     <Content Include="Areas\Assets\font\fontawesome-free-5.14.0-web\webfonts\fa-solid-900.ttf" />
     <Content Include="Areas\Assets\font\fontawesome-free-5.14.0-web\webfonts\fa-solid-900.woff" />
     <Content Include="Areas\Assets\font\fontawesome-free-5.14.0-web\webfonts\fa-solid-900.woff2" />
-    <Content Include="Areas\Manage\Views\TrangChu\Login.cshtml" />
     <Content Include="Areas\Manage\Views\Shared\_Layout1.cshtml" />
     <Content Include="Areas\Assets\Admin\scss\navs\_global.scss" />
     <Content Include="Areas\Assets\Admin\scss\navs\_sidebar.scss" />
@@ -3782,6 +3784,7 @@
     <Content Include="Areas\Manage\Views\Admin\Index.cshtml" />
     <Content Include="Areas\Manage\Views\Admin\DanhSachTaiKhoan.cshtml" />
     <Content Include="Areas\Manage\Views\Admin\Them.cshtml" />
+    <Content Include="Areas\Manage\Views\Admin\Sua.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -26,7 +26,7 @@ namespace WebsiteKhachSan.Areas.Manage
            );
             context.MapRoute(
                name: "Them",
-               url: "them-tai-khoan",
+               url: "them-tk",
                defaults: new { controller = "Admin", action = "Them", id = UrlParameter.Optional }
            );
         }

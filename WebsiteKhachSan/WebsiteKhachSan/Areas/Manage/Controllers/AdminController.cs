@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Model.Dao;
 using Model.EF;
+using WebsiteKhachSan.Common;
 
 
 namespace WebsiteKhachSan.Areas.Manage.Controllers
@@ -18,9 +19,10 @@ namespace WebsiteKhachSan.Areas.Manage.Controllers
         {
             return View();
         }
-        public ActionResult DanhSachTaiKhoan(string search, int page = 1, int pagesize = 5)
+        public ActionResult DanhSachTaiKhoan(string searchString, int page = 1, int pagesize = 5)
         {
-            var model = dao.DanhSachTaiKhoan(search, page, pagesize);
+            var model = dao.DanhSachTaiKhoan(searchString, page, pagesize);
+            ViewBag.ChuoiTimKiem = searchString;
             return View(model);
         }
         [HttpGet]
@@ -30,27 +32,39 @@ namespace WebsiteKhachSan.Areas.Manage.Controllers
             ViewBag.listquyen = new SelectList(listquyen, "MaQuyen", "TenQuyen");
             return View();
         }
-        [HttpPost]
-        public ActionResult Them(TaiKhoan tk)
+       [HttpPost]
+        public ActionResult Them(User tk)
         {
             if (ModelState.IsValid)
             {
-                var dao = new LoginDao();
                 long id = dao.Insert(tk);
-                if (id > 0)
+                if(id > 1)
                 {
-                    return RedirectToAction("DanhSachTaiKhoan","Admin");
+                    return RedirectToAction("DanhSachTaiKhoan", "Admin");
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Thêm không thành công!!!!!");
+                    ModelState.AddModelError("", "Thêm tài khoản không thành công");
                 }
-
             }
+
             List<Quyen> listquyen = db.Quyen.ToList();
             ViewBag.listquyen = new SelectList(listquyen, "MaQuyen", "TenQuyen");
-
             return View("Them");
+        }
+        [HttpGet]
+        public ActionResult Sua(int id)
+        {
+            var user = new LoginDao().ViewDetail(id);
+            List<Quyen> listquyen = db.Quyen.ToList();
+            ViewBag.listquyen = new SelectList(listquyen, "MaQuyen", "TenQuyen");
+            return View(user);
+        }
+        [HttpPost]
+        public ActionResult Logout()
+        {
+            Session[CommonConstants.USER_SESSION] = null;
+            return RedirectToAction("Index", "TrangChu");
         }
     }
 }

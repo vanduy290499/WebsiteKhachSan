@@ -65,7 +65,7 @@
     <Compile Include="EF\Phong.cs" />
     <Compile Include="EF\Quyen.cs" />
     <Compile Include="EF\sysdiagrams.cs" />
-    <Compile Include="EF\TaiKhoan.cs" />
+    <Compile Include="EF\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

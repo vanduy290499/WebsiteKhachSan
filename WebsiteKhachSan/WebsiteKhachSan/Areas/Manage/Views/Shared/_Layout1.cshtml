@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template-->
     <link href="~/Areas/Assets/Admin/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="~/Content/PagedList.css" rel="stylesheet"/> 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </head>
@@ -37,20 +38,6 @@
                 <div class="sidebar-brand-text mx-3">Admin <sup>2</sup></div>
             </a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Bảng điều khiển</span>
-                </a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
             <!-- Heading -->
             <div class="sidebar-heading">
                 Giao diện
@@ -67,7 +54,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tùy chỉnh:</h6>
                         <a class="collapse-item" href="/danh-sach">Danh sách nhân viên</a>
-                        <a class="collapse-item" href="/them-tai-khoan">Thêm nhân viên   </a>
+                        <a class="collapse-item" href="/them-tk">Thêm nhân viên   </a>
                     </div>
                 </div>
             </li>
@@ -163,6 +150,7 @@
                             </div>
                         </div>
                     </form>
+                    <a href="@Url.Action("Logout","Admin")">Đăng xuất</a>
                 </nav>
                 @RenderBody()
 

@@ -13,7 +13,7 @@ namespace Model.EF
         public Quyen()
         {
             Khachhang = new HashSet<Khachhang>();
-            TaiKhoan = new HashSet<TaiKhoan>();
+            User = new HashSet<User>();
         }
 
         [Key]
@@ -26,6 +26,6 @@ namespace Model.EF
         public virtual ICollection<Khachhang> Khachhang { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TaiKhoan> TaiKhoan { get; set; }
+        public virtual ICollection<User> User { get; set; }
     }
 }

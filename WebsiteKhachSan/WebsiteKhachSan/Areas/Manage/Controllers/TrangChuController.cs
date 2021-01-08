@@ -29,7 +29,7 @@ namespace WebsiteKhachSan.Areas.Manage.Controllers
                     {
                         var user = dao.GetById(model.UserName);
                         var userSession = new UserLogin();
-                        userSession.UserName = user.TaiKhoan1;
+                        userSession.UserName = user.TaiKhoan;
                         userSession.UserID = user.MaTK;
                         Session.Add(CommonConstants.USER_SESSION, userSession);
                         return RedirectToAction("Index", "Admin");

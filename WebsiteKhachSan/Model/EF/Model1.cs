@@ -20,7 +20,7 @@ namespace Model.EF
         public virtual DbSet<Phong> Phong { get; set; }
         public virtual DbSet<Quyen> Quyen { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<TaiKhoan> TaiKhoan { get; set; }
+        public virtual DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -40,11 +40,11 @@ namespace Model.EF
                 .Property(e => e.Tenquyen)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TaiKhoan>()
-                .Property(e => e.TaiKhoan1)
+            modelBuilder.Entity<User>()
+                .Property(e => e.TaiKhoan)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TaiKhoan>()
+            modelBuilder.Entity<User>()
                 .Property(e => e.MatKhau)
                 .IsUnicode(false);
         }
